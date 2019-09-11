@@ -4,14 +4,14 @@ from objs import Bus
 import json
 import pymongo
 
-app = Flask(__name__)
+application = Flask(__name__)
 mng_client = pymongo.MongoClient(
     "mongodb+srv://admin:admin@testcluster0-zvzsm.mongodb.net/test?retryWrites=true&w=majority")
 mng_db = mng_client["BusStops"]  # Replace mongo db name
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    application.run(debug=True)
 
 @app.route('/about')
 def index():
