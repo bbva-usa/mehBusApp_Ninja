@@ -1,7 +1,7 @@
 from flask import Flask, make_response
 from bson.json_util import dumps
 from objs import Bus
-
+import json
 import pymongo
 
 app = Flask(__name__)
@@ -13,10 +13,7 @@ mng_db = mng_client["BusStops"]  # Replace mongo db name
 if __name__ == "__main__":
     app.run(debug=True)
 
-@app.route('/')
 @app.route('/about')
-
-
 def index():
     return "Hello, Fairfield!"
 
