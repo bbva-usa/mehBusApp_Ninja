@@ -13,12 +13,12 @@ mng_db = mng_client["BusStops"]  # Replace mongo db name
 if __name__ == "__main__":
     application.run(debug=True)
 
-@app.route('/about')
+@application.route('/about')
 def index():
     return "Hello, Fairfield!"
 
 
-@app.route("/routes")
+@application.route("/routes")
 def get_routes():
 
     collection_name = 'Routes' # Replace mongo db collection name
@@ -27,12 +27,12 @@ def get_routes():
 
 
 
-@app.route('/buses')
+@application.route('/buses')
 def getBuses():
     return "Hello, Fairfield!"
 
 
-@app.route('/buses/<busNumber>')
+@aapplicationpp.route('/buses/<busNumber>')
 def getBus(busNumber):
     bus = Bus()
     return json.loads(bus.get_bus())
