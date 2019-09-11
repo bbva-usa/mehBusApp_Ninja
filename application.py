@@ -32,7 +32,7 @@ def getBuses():
     return "Hello, Fairfield!"
 
 
-@aapplicationpp.route('/buses/<busNumber>')
+@application.route('/buses/<busNumber>')
 def getBus(busNumber):
     bus = Bus()
     return json.loads(bus.get_bus())
